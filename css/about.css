@@ -1,0 +1,280 @@
+:root {
+  /* Variabla globale për ngjyrat dhe madhësitë */
+  --primary-color: #404040; 
+  --primary-color-dark: #2d4f5b;
+  --primary-color-light: #cfe2e7; 
+  --secondary-color: #ff48a8; 
+  --text-dark: #2c3e50;
+  --text-light: #95a5a6; 
+  --white: #ffffff;
+  --max-width: 1200px;
+  --background-light: #f4f4f4;
+}
+
+/* Ngarkimi i një fonti të personalizuar */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Inter18pt-MediumItalic.woff2') format('woff2'),
+       url('/fonts/Inter18pt-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Margin dhe Padding për të gjith elementet */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Stilim i header me imazh ne sfond dhe gradientin e tij */
+header {
+  position: relative;
+  background-image: linear-gradient(to right,
+    rgba(45, 79, 91, 0.6), 
+    rgba(64, 64, 64, 0.7)),
+    url("/imgs/about-1.webp");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 500px; 
+  z-index: 1;
+}
+
+/* Vendosja e elementëve të tekstit sipër imazhit */
+header h1,
+header p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Seksioni kryesor - hero */
+.hero {
+  text-align: center;
+  background-size: cover; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 0;
+}
+
+/* Pozicionim i personalizuar për titullin dhe tekstin brenda hero */
+.hero > h4 {
+  position: relative;
+  top: -250px;
+}
+
+.hero > div {
+  position: relative;
+  top: -200px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Pershtatje per pozicionimin dhe formatimin e tekstit */
+.text-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Definim i stileve për fontin Inter ne dy variante */
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Madhesi shtese per tekste */
+.text-normal {
+  font-size: 1.5rem;
+}
+
+.text-big {
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+/* Stilim për imazhin e seksionit about me border gradient */
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px; 
+  border: 10px solid #ff48a8;
+  border-image: linear-gradient(to right, #ff48a8, #cfe2e7) 1 stretch;
+}
+
+/* Efekt 3D tek kartat me animacion në hover */
+.card {
+  transform: perspective(500px) rotateY(10deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Seksioni About-us */
+#about-us {
+  padding: 80px 20px;
+  background-color: var(--background-light);
+  text-align: center;
+}
+
+/*Container-i kryesor per seksionin about */
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Teksti në seksionin About */
+.about-text {
+  max-width: 800px;
+}
+
+.about-text h2 {
+  font-size: 2.8em;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.2em;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Responsive për ekranet më të mëdha se 768px */
+@media (min-width: 768px) {
+  .about-us-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-text {
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .about-image {
+    max-width: 45%;
+  }
+}
+
+/* Responsive për ekranet më të vogla se 768px */
+@media (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column;
+  }
+
+  .about-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}
+
+/* Teksti në header per pajisje te vogla */
+@media (max-width: 768px) {
+  .header__container h1 {
+    font-size: 2rem;
+  }
+
+  .header__container p {
+    font-size: 1rem;
+  }
+}
+
+/* Permiresimi i madhesise se tekstit ne hero per ekrane te vogla */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Stilimi i footer me flex */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__col {
+  flex: 1 1 200px; 
+  max-width: 300px;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+/* Footer responsive per ekrane te vogla */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .footer__col {
+    max-width: 100%; 
+    text-align: center;
+  }
+
+  .footer__bar {
+    font-size: 0.9rem; 
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__socials span {
+    margin: 0 10px; 
+  }
+}
+
+/* Footer per ekrane shume te medha */
+@media (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; 
+  }
+
+  .footer__col {
+    flex: 1 1 300px; 
+  }
+
+  .footer__bar {
+    padding: 20px; 
+  }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Your site description">
+  <meta name="keywords" content="web, responsive, design">
+  <meta name="author" content="Your Name">
+  <link rel="stylesheet" href="/css/style.css" >
+  <link rel="stylesheet" href="/css/home.css" >
+  <title>PetCare Hub</title>
+</head>
+
+<body>
+  <!-- ===================== Header ===================== -->
+  <header>
+    <nav class="section__container nav__container navbar">
+      <div class="nav__logo">PetCare<span>Hub</span></div>
+      <div class="nav__toggle" id="nav-toggle">&#9776;</div>
+      <ul class="nav__links" id="nav-links">
+        <li class="link"><a href="home.html">Home</a></li>
+        <li class="link"><a href="about.html">About Us</a></li>
+        <li class="link"><a href="services.html">Services</a></li>
+        <li class="link"><a href="team.html">Team</a></li>
+        <li class="link"><a href="blog.html">Blog</a></li>
+        <li><input type="search" placeholder="Search..." class="search-bar"></li>
+      </ul>
+      <button class="btn btn__book" id="bookButton" onclick="location.href='book.html';" >Book Now</button>
+    </nav>
+
+
+    <div class="section__container header__container" id="home">
+      <div class="header__content">
+        <h1>Where Your Pet's Happiness Comes First!</h1>
+        <p>
+          PetCare Hub is the place where your pets receive the care and love they deserve. We offer comprehensive
+          services for your pets' health and well-being, from grooming and nutrition to medical care and fun activities.
+          At PetCare Hub, every visit is an opportunity to strengthen your bond with your pet and ensure they live a
+          happy, healthy life.
+        </p>
+        <button class="btn " id="start-timer" >Book Appointment</button>
+        <div id="event-result"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== Main ===================== -->
+  <main>
+
+    <!-- ======= Testimonials Section ======= -->
+    <div class="services">
+      <div class="service-heading">
+        <h2>What people say about us</h2>
+      </div>
+
+      <div class="horizontal-cards">
+        <article class="card">
+          <img class="client-pic" src="/imgs/client-3.jpg" alt="client-1" >
+          <h3 class="card-title">Sarah Johnson</h3>
+          <p class="card-body">
+            The care my dog received at Pet Doctor was exceptional. The vets were attentive and cared about my
+            dog's well-being.
+          </p>
+        </article>
+
+        <article class="card">
+          <img class="client-pic" src="/imgs/client-1.jpg" alt="client-2">
+          <h3 class="card-title">Emily Smith</h3>
+          <p class="card-body">
+            Pet Doctor saved my cat during an emergency! Their quick response and expertise made all the difference.
+          </p>
+        </article>
+
+        <article class="card">
+          <img class="client-pic" src="/imgs/client-2.jpg" alt="client-3" >
+          <h3 class="card-title">Michael Adams</h3>
+          <p class="card-body">
+            I trust Pet Doctor with all my pets. Their team is professional, and they always go the extra mile
+            for their patients.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <!-- ======= Stats Section ======= -->
+    <div class="horizontal-cards">
+      <div class="stats">
+        <img class="images" src="/imgs/about-2-icon.png" alt="icon-1">
+        <h3 class="card-title">15+</h3>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="stats">
+        <img class="images" src="/imgs/about-1-icon.png" alt="icon-2">
+        <h3 class="card-title">500+</h3>
+        <p>Projects Completed</p>
+      </div>
+
+      <div class="stats">
+        <img class="images" src="/imgs/about-3.-icon.svg" alt="icon-3">
+        <h3 class="card-title">350+</h3>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="section__container footer__container">
+
+      <div class="footer__col">
+        <h3>PetCare<span>Hub</span></h3>
+        <p>
+          We are honored to be a part of your pet’s well-being journey and are committed to providing compassionate,
+          personalized, and high-quality care at every stage. Your pet's happiness and health are our top priority.
+        </p>
+        <p>
+          Trust us with your pets' well-being, and together we will ensure the happiest and healthiest life for them.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>About Us</h4>
+        <p><a href="home.html">Home</a></p>
+        <p><a href="about.html">About Us</a></p>
+        <p><a href="services.html">Services</a></p>
+        <p><a href="pets.html">Pets We Treat</a></p>
+        <p><a href="blog.html">Blog</a></p>
+        <p><a href="schedule.html">Schedule</a></p>
+        <p><a href="statistics.html">Statistics</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Company</h4>
+        <p><a href="team.html">Team</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact Us</h4>
+        <p><i class="ri-map-pin-2-fill"></i><a href="location.html">Location</a></p>
+        <p><i class="ri-mail-fill"></i> PetCareHub@gmail.com</p>
+        <p><i class="ri-phone-fill"></i> (+355) 691234597 </p>
+        <p><i class="ri-calendar-event-fill"></i><a href="eventscalendar.html">Calendar of Events</a> </p>
+      </div>
+
+    </div>
+
+    <div class="footer__bar">
+      <div class="footer__bar__content">
+        <p>Copyright © 2025 Economic Informatics. All rights reserved.</p>
+        <div class="footer__socials">
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-heart-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/home.js" defer></script>
+  <script src="/js/book.js" defer></script>
+</body>
+
+</html>
+

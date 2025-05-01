@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  background: #f2f7ff;
+  color: #333;
+}
+
+/* Kontejneri kryesor */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+/* Titujt */
+h1, h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+  color: #3498db;
+}
+
+/* Paragrafët */
+p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center;
+  margin: 10px 0 30px 0;
+}
+
+/* Kontejneri i grafikëve */
+.chart-container {
+  position: relative;
+  width: 70%; 
+  margin: 20px auto 50px;
+  padding: 15px; 
+  background: #fafafa;
+  border-radius: 10px;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+
+.chart-container:hover {
+  transform: scale(1.02);
+  background: #f0f8ff;
+}
+
+/* Responsive grafikët */
+canvas {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* Media Queries per celulare dhe tablet */
+@media (max-width: 768px) {
+  .container {
+      margin: 20px;
+      padding: 15px;
+  }
+
+  h1, h2 {
+      font-size: 1.6em;
+  }
+
+  p {
+      font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.4em;
+  }
+  h2 {
+      font-size: 1.2em;
+  }
+  p {
+      font-size: 0.95em;
+  }
+}
+
+/* Permiresimi i madhesise se tekstit ne hero per ekrane shume te vogla */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Stilimi i footer me flex */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__col {
+  flex: 1 1 200px; 
+  max-width: 300px;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+/* Footer responsive për ekrane te vogla */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .footer__col {
+    max-width: 100%; 
+    text-align: center;
+  }
+
+  .footer__bar {
+    font-size: 0.9rem; 
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__socials span {
+    margin: 0 10px; 
+  }
+}
+
+/* Footer per ekrane shume te medha */
+@media (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; 
+  }
+
+  .footer__col {
+    flex: 1 1 300px; 
+  }
+
+  .footer__bar {
+    padding: 20px; 
+  }
+}

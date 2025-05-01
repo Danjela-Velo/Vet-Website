@@ -1,0 +1,327 @@
+/* Ngarkimi i nje fonti te personalizuar */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Inter18pt-MediumItalic.woff2') format('woff2'),
+       url('/fonts/Inter18pt-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Ngjyrat dhe vlerat e pergjithshme te percaktuara si variabla */
+:root {
+  --text-dark: #3f3b57;
+  --text-light: #908ca3;
+  --max-width: 1200px;
+}
+
+/* Header me sfond imazhi dhe gradient */
+header {
+  position: relative;
+  background-image: linear-gradient(to right,
+  rgba(45, 79, 91, 0.9), /* Blu gri #2d4f5b me 90% transparence */
+  rgba(64, 64, 64, 0.7)),
+    url("/imgs/location-pets.jpeg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+:root {
+  --primary-color: #404040; 
+  --primary-color-dark: #2d4f5b;
+  --primary-color-light: #cfe2e7; 
+  --secondary-color: #ff48a8; 
+  --text-dark: #2c3e50;
+  --text-light: #95a5a6; 
+  --white: #ffffff;
+  --max-width: 1200px;
+  --background-light: #f4f4f4;
+}
+
+/* Elementet e tekstit brenda header */
+header h1,
+header p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Seksioni hero - tekst i vendosur ne qender vertikalisht e horizontalisht */
+.hero {
+  text-align: center;
+  background-size: cover; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 0;
+}
+
+/* Pozicionim per titullin nen sfondin hero */
+.hero > h4 {
+  position: relative;
+  top: -250px; 
+}
+
+/* Permbajtja ne hero */
+.hero > div {
+  position: relative;
+  top: -200px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Per tekstet e pozicionuara ne qender */
+.text-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-normal {
+  font-size: 1.5rem;
+}
+
+.text-big {
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+/* Stilimi i pergjithshem i trupit te faqes */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 0;
+}
+
+/* Efekt hover mbi imazhet e kafsheve */
+.pet img:hover {
+  transform: scale(1.05); 
+}
+
+/* Kontejner për kafshet me grid 3 kolonash */
+.pets-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+  margin: 0 auto;
+  justify-items: center;
+  padding: 30px;
+  z-index: 1;
+  position: relative;
+  top: 10px;
+}
+
+/* Qenderzim i seciles kafshe */
+.pet {
+  text-align: center;
+}
+
+/* Rrethim i imazheve të kafsheve */
+.pet img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+/* Stilimi i emrit te kafshes */
+.pet-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Media Queries per pajisje te ndryshme */
+
+/* Per laptope dhe tableta */
+@media (max-width: 1024px) {
+  header {
+    height: 400px; 
+  }
+
+  .hero > h4 {
+    font-size: 36px;
+  }
+
+  .text-position {
+    font-size: 1.1rem;
+  }
+
+  .pets-container {
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 20px;
+  }
+
+  .pet img {
+    width: 180px; 
+    height: 180px;
+  }
+
+  .pet-name {
+    font-size: 14px; 
+  }
+}
+
+/* Per tableta me te vegjel */
+@media (max-width: 768px) {
+  header {
+    height: 300px;
+  }
+
+  .hero > h4 {
+    font-size: 28px; 
+  }
+
+  .text-position {
+    font-size: 1rem; 
+  }
+
+  .pets-container {
+    grid-template-columns: 1fr; 
+    padding: 15px;
+  }
+
+  .pet img {
+    width: 150px; 
+    height: 150px;
+  }
+
+  .pet-name {
+    font-size: 12px; 
+  }
+
+  .hero > div {
+    top: -100px; 
+  }
+
+  .text-position {
+    max-width: 95%; 
+  }
+}
+
+/* Per celulare */
+@media (max-width: 480px) {
+  header {
+    height: 250px; 
+  }
+
+  .hero > h4 {
+    font-size: 24px; 
+  }
+
+  .text-position {
+    font-size: 0.9rem; 
+  }
+
+  .pets-container {
+    grid-template-columns: 1fr; 
+    padding: 10px;
+  }
+
+  .pet img {
+    width: 120px; 
+    height: 120px;
+  }
+
+  .pet-name {
+    font-size: 10px; 
+  }
+}
+
+/* Permiresim shtese per tekstet ne ekran shume te vogel */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Footer me layout fleksibel */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Secili kolonë ne footer */
+.footer__col {
+  flex: 1 1 200px; 
+  max-width: 300px;
+}
+
+/* Bar poshte footer me ngjyre te erret dhe tekst te bardhe */
+.footer__bar {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+/* Footer per pajisje mobile */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .footer__col {
+    max-width: 100%; 
+    text-align: center;
+  }
+
+  .footer__bar {
+    font-size: 0.9rem; 
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__socials span {
+    margin: 0 10px; 
+  }
+}
+
+/* Footer për desktop te gjere */
+@media (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; 
+  }
+
+  .footer__col {
+    flex: 1 1 300px; 
+  }
+
+  .footer__bar {
+    padding: 20px; 
+  }
+}

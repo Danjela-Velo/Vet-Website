@@ -1,0 +1,82 @@
+body {
+  width: 100%;
+  height: 100vh; 
+  margin: 0; 
+  background-color: #cfe2e7; 
+  color: #1b1b32; 
+  font-family: Tahoma; 
+  font-size: 16px; 
+}
+
+/* Konfigurimi i titujve dhe paragrafeve per qenderzim dhe margin*/
+h1, h3, p {
+  margin: 1em auto; 
+  text-align: center;
+}
+
+/* Stilizimi i formes, duke caktuar gjeresinë dhe qenderzimin */
+form {
+  width: 60vw; 
+  max-width: 500px; 
+  min-width: 300px; 
+  margin: 0 auto; 
+  padding-bottom: 2em; 
+}
+
+/* Heqja e bordures dhe vendosja e ndarjes per secilen seksion te formes */
+fieldset {
+  border: none;
+  padding: 2rem 0; 
+  border-bottom: 3px solid #3b3b4f; 
+}
+
+/* Heqja e bordures nga fieldset i fundit */
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+/* Stilizimi i etiketave me margjine dhe shfaqje si bllok */
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* Konfigurimi i input, textarea dhe select me gjerësi 100% */
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%; 
+  min-height: 2em; 
+}
+
+/* Stilizimi i input dhe textarea me ngjyre te erret dhe tekst te bardhe */
+input, textarea {
+  background-color: #0a0a23; 
+  border: 1px solid #0a0a23; 
+  color: #ffffff; 
+}
+
+/* Pershtatja e stilit per elementet qe jane inline */
+.inline {
+  width: unset; 
+  margin: 0 0.5em 0 0; 
+  vertical-align: middle; 
+}
+
+/* Konfigurimi i butonit submit me stilizimin e ngjyres dhe dimensioneve */
+input[type="submit"] {
+  display: block;
+  width: 60%; 
+  margin: 1em auto; 
+  height: 2em; 
+  font-size: 1.1rem; 
+  background-color: #3b3b4f; 
+  border-color: white; 
+  min-width: 300px; 
+}
+
+/* Konfigurimi i input-it per ngarkim dosjesh */
+input[type="file"] {
+  padding: 1px 2px; 
+}

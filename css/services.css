@@ -1,0 +1,351 @@
+:root {
+  --text-dark: #3f3b57;
+  --text-light: #908ca3;
+  --max-width: 1200px;
+  --primary-color: #404040; 
+  --primary-color-dark: #2d4f5b;
+  --primary-color-light: #cfe2e7; 
+  --secondary-color: #ff48a8; 
+  --white: #ffffff;
+  --background-light: #f4f4f4;
+  --header-height: 500px; /* Perdorimi i variables per lartësine e header */
+}
+
+/* Ngarkimi i një fonti te personalizuar */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Inter18pt-MediumItalic.woff2') format('woff2'),
+       url('/fonts/Inter18pt-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Formatimi i header dhe background me gradient */
+header {
+  position: relative;
+  background-image: linear-gradient(to right,
+    rgba(45, 79, 91, 0.9), /* Blu gri #2d4f5b me 90% transparence */
+    rgba(64, 64, 64, 0.7)),
+    url("/imgs/hero-service.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: var(--header-height); 
+}
+
+/* Stili i titujve dhe paragrafeve ne header */
+header h1,
+header p {
+  position: relative;
+  z-index: 2;
+}
+
+/* Stili për seksionin hero */
+.hero {
+  text-align: center;
+  background-size: cover; 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 0;
+}
+
+/* Per levizjen dhe pozicionimin e elementeve brenda hero */
+.hero > h4 {
+  position: relative;
+  top: -250px; 
+}
+
+.hero > div {
+  position: relative;
+  top: -200px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Teksti i pozicionuar perfaqesueshem ne seksionin hero */
+.text-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Perdorimi i fontit te personalizuar per elemente te ndryshme */
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-normal {
+  font-size: 1.5rem;
+}
+
+.text-big {
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+/* Perdorimi i selectoreve per organizim te mire te layout-it */
+.container {
+  max-width: var(--max-width);
+  padding: 3rem 1rem;
+  margin: auto;
+}
+
+.about-info span {
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.about-info span img {
+  max-width: 40px;
+}
+
+.about-title {
+  max-width: 450px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--text-dark); 
+  line-height: 3rem;
+}
+
+.about-text {
+  max-width: 450px;
+  margin-inline: auto;
+  color: var(--text-light);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-align: center;
+  line-height: 3.5rem;
+}
+
+.about-item {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.about-item:nth-child(3) {
+  margin-top: 4rem;
+}
+
+.about-img {
+  flex: 1;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.about-info {
+  flex: 1;
+  text-align: center;
+}
+
+.about-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.about-icon {
+  background-color: #dff3fe; 
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.about-icon img {
+  max-width: 60px;
+  height: auto;
+}
+
+.about-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Krijimi i nje seksioni Call to Action */
+.call-to-action {
+  background-color: #FFA6C9; 
+  color: white;
+  text-align: center;
+  padding: 100px; 
+  font-family: 'Arial', sans-serif;
+  margin: 20px auto;
+}
+
+.call-to-action h2 {
+  font-size: 2rem;
+  margin-bottom: 10px; 
+}
+
+.call-to-action p {
+  font-size: 1.2rem;
+  line-height: 1.5; 
+}
+
+/* Media queries per pajisjet e ndryshme */
+@media (min-width: 768px) {
+  .about-item {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Per elemente qe shfaqen vetem ne desktop */
+  .about-us-container {
+    flex-direction: column;
+  }
+
+  .about-text {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Per permirësimin e funksionimit ne pajisje mobile */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Perdorimi i pseudo-elementeve dhe selektorëve të tjerë */
+.text-position:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* Përmirësimi i madhësisë së tekstit në hero për ekranet shumë të vogla */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Stilimi i footer me flex */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__col {
+  flex: 1 1 200px; 
+  max-width: 300px;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+/* Footer responsive per ekrane te vogla */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .footer__col {
+    max-width: 100%; 
+    text-align: center;
+  }
+
+  .footer__bar {
+    font-size: 0.9rem; 
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__socials span {
+    margin: 0 10px; 
+  }
+}
+
+/* Footer per ekrane shume te medha */
+@media (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; 
+  }
+
+  .footer__col {
+    flex: 1 1 300px; 
+  }
+
+  .footer__bar {
+    padding: 20px; 
+  }
+}

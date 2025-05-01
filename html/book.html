@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" >
+  <link rel="stylesheet" href="/css/book.css">
+  <title>About Us</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Great, just a few more details!</h1>
+    <p>This should only take a few minutes.</p>
+
+    <div id="error-messages" style="color:red;"></div>
+
+    <form id="booking-form">
+      <fieldset>
+        <legend>Your Information</legend>
+        <label for="first-name">
+          Enter Your First Name:
+          <input id="first-name" name="first-name" type="text" placeholder="First Name" required tabindex="1" >
+        </label>
+        <label for="last-name">
+          Enter Your Last Name:
+          <input id="last-name" name="last-name" type="text" placeholder="Last Name" required tabindex="2" >
+        </label>
+        <label for="email">
+          Enter Your Email:
+          <input id="email" name="email" type="email" placeholder="Email" required tabindex="3" >
+        </label>
+        <label for="phone">
+          Phone:
+          <input id="phone" name="phone" type="tel" placeholder="123-3456789" pattern="[0-9]{3}-[0-9]{7}" required tabindex="4" >
+        </label>
+        <label for="pass1">
+          Password:
+          <input id="pass1" name="pass1" type="password" placeholder="Password" required tabindex="5" >
+        </label>
+        <label for="pass2">
+          Confirm Password:
+          <input id="pass2" name="pass2" type="password" placeholder="Confirm Password" required tabindex="6" >
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Pet's Information</legend>
+        <label for="species">Species:</label>
+        <select id="species" name="species" required tabindex="7">
+          <option value="">(select one)</option>
+          <option value="dog">Dog</option>
+          <option value="cat">Cat</option>
+          <option value="rabbit">Rabbit</option>
+          <option value="hamster">Hamster</option>
+          <option value="guinea-pig">Guinea pig</option>
+          <option value="parrot">Parrot</option>
+          <option value="horse">Horse</option>
+          <option value="cow">Cow</option>
+          <option value="goat">Goat</option>
+          <option value="turtle">Turtle</option>
+        </select><br>
+      </fieldset>
+      <fieldset>
+        <legend>Pet's Gender:</legend>
+        <label for="personal-account">
+          <input id="personal-account" name="account-type" type="radio" class="inline" value="Female" required tabindex="8" >
+          Female
+        </label>
+        <label for="business-account">
+          <input id="business-account" name="account-type" type="radio" class="inline" value="Male" required tabindex="9" >
+          Male
+        </label>
+      </fieldset>
+        <label for="age">
+          Input your pet age (years):
+          <input id="age" name="age" type="number" min="0" max="20" required tabindex="10" >
+        </label>
+
+        <details>
+          <summary>More Optional Information</summary>
+          <label for="year">
+            Year of Birth:
+            <input id="year" name="year" type="number" min="1945" max="2010" tabindex="11" >
+          </label>
+          <label for="month">
+            Month of Birth:
+            <input id="month" name="month" type="month" tabindex="12" >
+          </label>
+          <label for="week">
+            Week of Birth:
+            <input id="week" name="week" type="week" tabindex="13" >
+          </label>
+        </details>
+
+        <label for="referrer">
+          What problem does the pet have?
+          <select id="referrer" name="referrer" required tabindex="14">
+            <option value="">(select one)</option>
+            <option value="routine">Routine Check-Up</option>
+            <option value="vaccination">Vaccination</option>
+            <option value="behavioral">Behavioral Problems</option>
+            <option value="dermatological">Dermatological Issues</option>
+            <option value="gastrointestinal">Gastrointestinal Problems</option>
+            <option value="orthopedic">Orthopedic Problems</option>
+            <option value="emergency">Emergency Care</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+
+        <label  for="profile-picture">
+          Upload your pet's picture:
+          <input  id="profile-picture" name="file" type="file" accept="image/*" required tabindex="15" >
+        </label>
+
+        <label for="bio">
+          Problem description:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="My pet's problem is..." required tabindex="16"></textarea>
+        </label>
+
+      <label for="terms-and-conditions">
+        <input id="terms-and-conditions" name="terms-and-conditions" class="inline" type="checkbox" required tabindex="17" >
+        I accept the <a href="privacy.html" target="_blank">terms and conditions</a>
+      </label>
+
+      <input type="submit" value="Submit" onclick="playAudio()" tabindex="18" >
+      <audio id="audio" src="/audio/click-sound.mp3"></audio>
+    </form>
+  </div>
+  <script src="/js/book.js" defer></script>
+  <script src="/js/home.js" defer></script>
+</body>
+
+</html>

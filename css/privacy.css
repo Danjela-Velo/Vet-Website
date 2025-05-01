@@ -1,0 +1,140 @@
+:root {
+  --primary-color: #404040; 
+  --primary-color-dark: #2d4f5b;
+  --primary-color-light: #cfe2e7; 
+  --secondary-color: #ff48a8; 
+  --text-dark: #2c3e50;
+  --text-light: #95a5a6; 
+  --white: #ffffff;
+  --max-width: 1200px;
+  --background-light: #f4f4f4;
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Ngarkimi i një fonti të personalizuar */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Inter18pt-MediumItalic.woff2') format('woff2'),
+       url('/fonts/Inter18pt-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Parandalon scroll horizontal */
+}
+
+.privacy-hero {
+  background-color: #e8fcf3;
+  padding: 8rem 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: none;
+}
+
+.privacy-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #1e1e1e;
+}
+
+.privacy-hero p {
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+.privacy-content {
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.privacy-content h3 {
+  margin-top: 2rem;
+  color: #1a7f5a;
+  border-left: 4px solid #1a7f5a;
+  padding-left: 0.5rem;
+}
+
+/* Permiresimi i madhesise se tekstit ne hero per ekranet shume te vogla */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Stilimi i footer me flex */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__col {
+  flex: 1 1 200px; 
+  max-width: 300px;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+/* Footer responsive per ekrane te vogla */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .footer__col {
+    max-width: 100%; 
+    text-align: center;
+  }
+
+  .footer__bar {
+    font-size: 0.9rem; 
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__socials span {
+    margin: 0 10px; 
+  }
+}
+
+/* Footer per ekrane shume te medha */
+@media (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; 
+  }
+
+  .footer__col {
+    flex: 1 1 300px; 
+  }
+
+  .footer__bar {
+    padding: 20px; 
+  }
+}

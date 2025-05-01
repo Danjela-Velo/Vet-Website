@@ -1,0 +1,333 @@
+:root {
+  --primary-color: #404040;
+  --primary-color-dark: #2d4f5b;
+  --primary-color-light: #cfe2e7;
+  --secondary-color: #ff48a8;
+  --text-dark: #2c3e50;
+  --text-light: #95a5a6;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --background-light: #f4f4f4;
+}
+
+/* Margin dhe Padding per te gjith elementet */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Ngarkimi i një fonti të personalizuar */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/fonts/Inter18pt-MediumItalic.woff2') format('woff2'),
+       url('/fonts/Inter18pt-MediumItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  position: relative;
+  background-image: linear-gradient(to right,
+  rgba(45, 79, 91, 0.9), /* Blu gri #2d4f5b me 90% transparence */
+  rgba(64, 64, 64, 0.7)),
+    url("/imgs/team-1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  z-index: 1;
+}
+
+header h4, header p {
+  position: relative;
+  z-index: 2;
+}
+
+.hero {
+  text-align: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 0;
+}
+
+.hero > h4 {
+  position: relative;
+  top: -250px;
+}
+
+.hero > div {
+  position: relative;
+  top: -200px;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.text-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.hero>img {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  filter: brightness(50%);
+  object-fit: cover;
+}
+
+.inter-medium {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-normal {
+  font-size: 1.5rem;
+}
+
+.text-big {
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+}
+
+/* Team members section */
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 40px 10px;
+  margin-top: 200px;
+  position: relative;
+  top: -100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.team-member {
+  background-color: #f4fcff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 25%;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  margin: 8px 0 4px;
+  font-size: 28px;
+  color: #1c2f40;
+}
+
+.team-member span {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.team-member p {
+  font-size: 16px;
+  color: #333;
+}
+
+.team-member:hover {
+  box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Dizajn Responsiv për Ekrane të Ndryshme */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 60vh;
+    padding: 20px;
+  }
+
+  .hero > h4 {
+    top: -100px;
+    font-size: 22px;
+  }
+
+  .hero > div {
+    top: -50px;
+    max-width: 90%;
+  }
+
+  .text-big {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 50vh;
+  }
+
+  .text-big {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .team-member {
+    width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .team-member h3 {
+    font-size: 22px;
+  }
+
+  .team-member span {
+    font-size: 18px;
+  }
+
+  .team-member p {
+    font-size: 14px;
+  }
+}
+/* Stile Shtese per Elementet e Butonave dhe të Formes */
+
+/* Shembull i stilimit te nje butoni me qoshe te rrumbullakosura dhe gradient */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Fushat e futjes së stilit */
+input[type="text"], input[type="email"], input[type="password"], input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="date"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Permiresimi i madhesise se tekstit ne hero per ekranet shume te vogla */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Stilimi i footer me flex */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer__col {
+  flex: 1 1 200px; 
+  max-width: 300px;
+}
+
+.footer__bar {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}
+
+/* Footer responsive për ekrane të vogla */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .footer__col {
+    max-width: 100%; 
+    text-align: center;
+  }
+
+  .footer__bar {
+    font-size: 0.9rem; 
+  }
+
+  .footer__socials {
+    justify-content: center;
+  }
+
+  .footer__socials span {
+    margin: 0 10px; 
+  }
+}
+
+/* Footer per ekrane shume te medha */
+@media (min-width: 1200px) {
+  .footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: nowrap; 
+  }
+
+  .footer__col {
+    flex: 1 1 300px; 
+  }
+
+  .footer__bar {
+    padding: 20px; 
+  }
+}

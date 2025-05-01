@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+    <link rel="stylesheet" href="/css/statistics.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Clinic Statistics</h1>
+        
+        <p>
+            Below are the statistics for the clinic:
+        </p>
+
+        <!-- Bar Chart Explanation -->
+        <h2>Monthly Bookings</h2>
+        <p>
+            The bar chart below shows the number of bookings for each month of the year. It helps us understand the trends in client visits over the months. The higher the bar, the more bookings were made in that specific month.
+        </p>
+        <div class="chart-container">
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <!-- Pie Chart Explanation -->
+        <h2>Most Requested Services</h2>
+        <p>
+            The pie chart below displays the most requested services at our clinic. Each slice represents the percentage of a service's popularity, helping us identify which services are in high demand. For example, "Checkups" takes up the largest portion, indicating it's the most frequently requested service.
+        </p>
+        <div class="chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Include the Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/chart.js"></script>
+</body>
+</html>
